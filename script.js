@@ -50,6 +50,24 @@ document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
   });
 });
 
+// Handle window resize - close mobile menu when resizing to desktop
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    if (window.innerWidth > 900 && navbar && navbar.classList.contains('open')) {
+      navbar.classList.remove('open');
+      if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+    // Remove active state from dropdowns when resizing to desktop
+    if (window.innerWidth > 900) {
+      document.querySelectorAll('.dropdown.active').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+  }, 250);
+});
+
 // Add scrolled class for visual depth after hero
 const onScroll = () => {
   if (!navbar) return;
@@ -96,6 +114,31 @@ onScroll();
   // Pause on hover (desktop)
   slider.addEventListener('mouseenter', stop);
   slider.addEventListener('mouseleave', start);
+
+  // Touch events for mobile swipe
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  slider.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stop();
+  }, { passive: true });
+  
+  slider.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+    start();
+  }, { passive: true });
+  
+  function handleSwipe() {
+    const swipeThreshold = 50; // minimum distance for swipe
+    if (touchEndX < touchStartX - swipeThreshold) {
+      next(); // swipe left
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+      prev(); // swipe right
+    }
+  }
 
   // Keyboard accessibility
   window.addEventListener('keydown', (e) => {
