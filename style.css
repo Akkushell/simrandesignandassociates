@@ -992,3 +992,328 @@ footer {
   .gallery-modal-content { padding: 20px; margin: 10% 5%; }
   .gallery-images { grid-template-columns: 1fr; }
 }
+
+/* Additional Responsive Styles for All Devices */
+
+/* Tablet Landscape & Small Desktop (900px - 1200px) */
+@media (max-width: 1200px) {
+  section { padding: 60px 8%; }
+  .service-detail { padding: 60px 8%; }
+  .nav-inner { padding: 12px 15px; }
+}
+
+/* Tablet Portrait (600px - 900px) */
+@media (max-width: 900px) {
+  /* Typography adjustments */
+  h2 { font-size: 1.8rem; margin-bottom: 25px; }
+  h3 { font-size: 1.2rem; }
+  p { font-size: 0.95rem; }
+  
+  /* Sections */
+  section { padding: 50px 6%; margin-bottom: 30px; }
+  
+  /* Brand logo */
+  .brand-logo { height: 52px; width: 85px; }
+  .brand-name { font-size: 0.95rem; }
+  
+  /* About section */
+  .about-grid { 
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+  .about-intro { padding: 25px; }
+  .about-card { padding: 25px; }
+  
+  /* Vision section */
+  .vision-content { gap: 20px; }
+  .vision-content div { padding: 25px; }
+  
+  /* Service cards */
+  .service-container { 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Detail pages */
+  .detail-grid { 
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .process-steps { 
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .why-choose { 
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Team section */
+  .team-member img {
+    width: 140px;
+    height: 140px;
+  }
+  
+  /* Service hero */
+  .service-hero {
+    height: 40vh;
+    min-height: 320px;
+  }
+  
+  /* Projects page */
+  .page-header { padding: 60px 20px 50px; }
+  .clients-section { padding: 60px 6%; }
+  .client-image { height: 180px; }
+}
+
+/* Mobile Landscape (480px - 600px) */
+@media (max-width: 600px) {
+  /* Typography */
+  h2 { font-size: 1.6rem; margin-bottom: 20px; }
+  h3 { font-size: 1.1rem; }
+  p { font-size: 0.9rem; line-height: 1.6; }
+  
+  /* Sections */
+  section { padding: 40px 5%; margin-bottom: 25px; }
+  
+  /* Brand */
+  .brand { gap: 8px; }
+  .brand-logo { height: 48px; width: 75px; }
+  .brand-name { font-size: 0.85rem; }
+  .brand-tagline { font-size: 0.65rem; }
+  
+  /* Slider */
+  .slider { height: 60vh; min-height: 450px; }
+  .slide-content { padding: 20px 15px; max-width: 100%; }
+  .slider-arrow { 
+    width: 36px; 
+    height: 36px;
+    font-size: 18px;
+  }
+  .slider-arrow.prev { left: 10px; }
+  .slider-arrow.next { right: 10px; }
+  .slider-dots { bottom: 12px; gap: 8px; }
+  .dot { width: 8px; height: 8px; }
+  
+  /* Buttons */
+  .btn { padding: 10px 18px; font-size: 0.9rem; }
+  
+  /* About section */
+  .about-intro { 
+    padding: 20px; 
+    margin-bottom: 30px;
+  }
+  .about-intro p { font-size: 1rem; }
+  .about-card { 
+    padding: 20px;
+  }
+  
+  /* Vision section */
+  .vision-content div { padding: 20px; }
+  
+  /* Services */
+  .service-container { 
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .service img { height: 180px; }
+  .service h3 { font-size: 1.1rem; }
+  .service p { font-size: 0.9rem; padding: 0 12px 15px; }
+  
+  /* Team */
+  .team-member img {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #d4af37;
+  }
+  
+  /* Contact */
+  .contact-info p { font-size: 0.9rem; }
+  
+  /* Footer */
+  footer { padding: 30px 20px 20px; }
+  .social-links { gap: 15px; }
+  .social-links a {
+    width: 40px;
+    height: 40px;
+  }
+  .social-links a svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Service detail pages */
+  .service-hero {
+    height: 35vh;
+    min-height: 280px;
+  }
+  .service-hero-content { padding: 20px; }
+  .service-detail { padding: 50px 5%; }
+  .service-detail .intro { font-size: 1rem; margin-bottom: 35px; }
+  .detail-card { padding: 20px; }
+  .step { padding: 20px; }
+  .feature { padding: 20px; }
+  .included-list { padding: 25px; }
+  .cta-section { 
+    padding: 35px 20px;
+    margin-top: 40px;
+  }
+  .cta-section h2 { font-size: 1.5rem; }
+  .cta-section p { font-size: 1rem; }
+  
+  /* Projects page */
+  .page-header { padding: 50px 15px 40px; }
+  .page-header h1 { font-size: 1.8rem; }
+  .page-header p { font-size: 1rem; }
+  .clients-section { padding: 50px 5%; }
+  .clients-section h2 { font-size: 1.8rem; }
+  .section-subtitle { font-size: 0.95rem; margin-bottom: 35px; }
+  .client-card { border: 1px solid rgba(212,175,55,0.3); }
+  .client-image { height: 150px; }
+  .client-info { padding: 18px; }
+  .client-info h3 { font-size: 1.1rem; }
+  .client-info p { font-size: 0.9rem; }
+  .view-gallery { 
+    padding: 10px 22px;
+    font-size: 0.85rem;
+  }
+  
+  /* Gallery modal */
+  .gallery-modal-content { 
+    padding: 15px;
+    margin: 5% 3%;
+  }
+  .gallery-close { 
+    font-size: 32px;
+    right: 15px;
+    top: 10px;
+  }
+  .gallery-modal-content h2 { 
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  .gallery-item img { height: 200px; }
+}
+
+/* Mobile Portrait (320px - 480px) */
+@media (max-width: 480px) {
+  /* Typography */
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1rem; }
+  
+  /* Sections */
+  section { padding: 35px 4%; }
+  
+  /* Navbar */
+  .nav-inner { padding: 10px 12px; }
+  .brand-logo { height: 44px; width: 70px; }
+  .brand-name { font-size: 0.8rem; }
+  .brand-tagline { font-size: 0.6rem; }
+  
+  /* Slider */
+  .slider { height: 55vh; min-height: 400px; }
+  .slide-content { padding: 15px 12px; }
+  .slider-arrow { 
+    width: 32px; 
+    height: 32px;
+    font-size: 16px;
+  }
+  .slider-arrow.prev { left: 8px; }
+  .slider-arrow.next { right: 8px; }
+  
+  /* About */
+  .about-intro { padding: 18px; }
+  .about-card { padding: 18px; }
+  
+  /* Vision */
+  .vision-content div { padding: 18px; }
+  
+  /* Services */
+  .service img { height: 160px; }
+  .service h3 { margin: 12px 0; }
+  
+  /* Team */
+  .team-member img {
+    width: 110px;
+    height: 110px;
+  }
+  
+  /* Footer */
+  footer { padding: 25px 15px 18px; font-size: 0.85rem; }
+  .social-links { gap: 12px; }
+  .social-links a {
+    width: 36px;
+    height: 36px;
+  }
+  .social-links a svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Service detail pages */
+  .service-hero { 
+    height: 30vh;
+    min-height: 250px;
+  }
+  .service-detail { padding: 40px 4%; }
+  .detail-card { padding: 18px; }
+  .step { padding: 18px; }
+  .step-number { font-size: 2rem; }
+  .feature { padding: 18px; }
+  .included-list { padding: 20px; }
+  .cta-section { padding: 30px 18px; }
+  
+  /* Projects page */
+  .page-header { padding: 40px 12px 35px; }
+  .page-header h1 { font-size: 1.6rem; }
+  .clients-section { padding: 40px 4%; }
+  .clients-section h2 { font-size: 1.6rem; }
+  .client-image { height: 140px; }
+  .client-info { padding: 15px; }
+  .view-gallery { padding: 9px 20px; }
+  
+  /* Gallery modal */
+  .gallery-modal-content { 
+    padding: 12px;
+    margin: 3% 2%;
+  }
+  .gallery-images { gap: 15px; }
+  .gallery-item img { height: 180px; }
+}
+
+/* Extra Small Devices (< 320px) */
+@media (max-width: 320px) {
+  section { padding: 30px 3%; }
+  h2 { font-size: 1.3rem; }
+  .brand-logo { height: 40px; width: 65px; }
+  .slider { height: 50vh; min-height: 350px; }
+  .service img { height: 140px; }
+  .team-member img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Landscape Orientation Adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .slider { height: 95vh; }
+  .service-hero { height: 85vh; }
+  section { padding: 40px 8%; }
+}
+
+/* High Resolution Displays */
+@media (min-width: 1400px) {
+  .nav-inner { max-width: 1400px; }
+  section { max-width: 1600px; margin-left: auto; margin-right: auto; }
+  .about-content { max-width: 1400px; }
+  .service-detail-container { max-width: 1400px; }
+}
+
+/* Print Styles */
+@media print {
+  .navbar, .slider-arrow, .slider-dots, footer, .social-links {
+    display: none;
+  }
+  section { page-break-inside: avoid; }
+  h2, h3 { page-break-after: avoid; }
+}
