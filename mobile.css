@@ -330,11 +330,57 @@
 }
 
 /* ========================================
-   SMALL MOBILE - 600px and below
+   TABLET PORTRAIT - 992px and below
+   ======================================== */
+@media (max-width: 992px) {
+  
+  /* Services grid adjustment for tablets */
+  .service-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  /* About section tablet */
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  /* Team member tablet */
+  .team-member img {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 18px;
+    display: block;
+  }
+}
+
+/* ========================================
+   SMALL TABLET - 768px and below  
+   ======================================== */
+@media (max-width: 768px) {
+  
+  /* About section single column */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  /* Team member small tablet */
+  .team-member img {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 15px;
+    display: block;
+  }
+}
+
+/* ========================================
+   LARGE MOBILE - 600px and below
    ======================================== */
 @media (max-width: 600px) {
   
-  /* Navbar extra small */
+  /* Navbar large mobile */
   .brand-logo {
     height: 45px;
     width: 70px;
@@ -382,6 +428,8 @@
   .team-member img {
     width: 120px;
     height: 120px;
+    margin: 0 auto 12px;
+    display: block;
   }
   
   .team-member h3 {
@@ -403,7 +451,7 @@
     font-size: 14px;
   }
   
-  /* Hero slider extra small */
+  /* Hero slider small mobile */
   .slider {
     height: 55vh;
   }
@@ -451,7 +499,8 @@
   .team-member img {
     width: 100px;
     height: 100px;
-    margin-bottom: 12px;
+    margin: 0 auto 10px;
+    display: block;
   }
   
   .team-member h3 {
@@ -480,6 +529,68 @@
   .social-links svg {
     width: 20px;
     height: 20px;
+  }
+}
+
+/* ========================================
+   LARGE SMARTPHONES - 428px and below
+   ======================================== */
+@media (max-width: 428px) {
+  
+  /* Team large smartphone */
+  .team-member img {
+    width: 115px;
+    height: 115px;
+    margin: 0 auto 12px;
+    display: block;
+  }
+  
+  /* Hero content adjustment for large phones */
+  .slide-content {
+    padding: 22px 18px;
+  }
+  
+  .slide-content h2 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+  }
+}
+
+/* ========================================
+   MODERN SMARTPHONES - 414px and below
+   ======================================== */
+@media (max-width: 414px) {
+  
+  /* Container adjustment for modern phones */
+  .container {
+    padding: 0 12px;
+  }
+  
+  /* Team modern smartphone */
+  .team-member img {
+    width: 105px;
+    height: 105px;
+    margin: 0 auto 10px;
+    display: block;
+  }
+  
+  /* Services modern smartphone */
+  .service {
+    padding: 12px;
+  }
+  
+  .service img {
+    height: 140px;
+  }
+  
+  /* Section headings modern smartphone */
+  .services h2,
+  .about h2,
+  .vision h2,
+  .team h2,
+  .contact h2 {
+    font-size: 1.4rem;
+    margin-bottom: 22px;
   }
 }
 
@@ -581,7 +692,8 @@
   .team-member img {
     width: 90px;
     height: 90px;
-    margin-bottom: 10px;
+    margin: 0 auto 8px;
+    display: block;
   }
   
   .team-member h3 {
