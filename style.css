@@ -18,8 +18,8 @@ img {
 }
 
 body {
-  color: #1a1a1a;
-  background: #f5f7fa;
+  color: #2d2d2d;
+  background: #FAF8F3;
   scroll-behavior: smooth;
   overflow-x: hidden;
   line-height: 1.6;
@@ -40,16 +40,16 @@ body {
 }
 
 /* ===================================================================
-   NAVBAR - Modern White Theme
+   NAVBAR - Modern Dark Red Theme
    =================================================================== */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #ffffff;
-  color: #1a1a1a;
-  border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #fff;
+  border-bottom: 2px solid #D4AF37;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   backdrop-filter: saturate(140%) blur(12px);
   transition: box-shadow 0.3s ease;
 }
@@ -68,7 +68,7 @@ body {
 .brand { 
   display: flex; 
   align-items: center; 
-  gap: 12px; 
+  gap: 15px; 
   text-decoration: none; 
 }
 
@@ -76,10 +76,11 @@ body {
   height: 60px;
   width: 95px;
   object-fit: contain;
-  background: #f9fafb;
-  padding: 6px;
+  background: linear-gradient(135deg, #FFFFFF, #F5F5DC);
+  padding: 8px;
   border-radius: 8px;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #D4AF37;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
 }
 
 .brand-text {
@@ -89,7 +90,7 @@ body {
 }
 
 .brand-name { 
-  color: #111827; 
+  color: #ffffff; 
   font-weight: 700; 
   letter-spacing: -0.3px;
   line-height: 1.2;
@@ -97,7 +98,7 @@ body {
 }
 
 .brand-tagline {
-  color: #6b7280;
+  color: #D4AF37;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.3px;
@@ -113,7 +114,7 @@ body {
 }
 
 .nav-menu a { 
-  color: #374151; 
+  color: #f5f5f5; 
   text-decoration: none; 
   font-weight: 500; 
   position: relative; 
@@ -123,7 +124,7 @@ body {
 }
 
 .nav-menu a:hover { 
-  color: #0ea5e9; 
+  color: #D4AF37; 
 }
 
 .nav-menu a::after {
@@ -133,7 +134,7 @@ body {
   bottom: 2px;
   height: 2px; 
   width: 0;
-  background: #0ea5e9;
+  background: #D4AF37;
   transition: width .25s ease;
 }
 
@@ -150,10 +151,10 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #ffffff;
+  background: #6B0000;
   min-width: 220px;
   border-radius: 12px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
@@ -161,7 +162,7 @@ body {
   z-index: 1000;
   padding: 8px;
   margin-top: 8px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #8B0000;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -177,7 +178,7 @@ body {
 .dropdown-menu a {
   display: block;
   padding: 12px 16px;
-  color: #374151;
+  color: #f5f5f5;
   font-weight: 500;
   transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
   border-radius: 8px;
@@ -189,15 +190,15 @@ body {
 }
 
 .dropdown-menu a:hover {
-  background: #f0f9ff;
-  color: #0ea5e9;
+  background: rgba(212, 175, 55, 0.2);
+  color: #D4AF37;
   padding-left: 20px;
 }
 
 /* Call to action link */
 .nav-menu .btn-cta {
-  color: #ffffff;
-  background: #0ea5e9;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #D4AF37, #FFD700);
   padding: 10px 20px;
   border-radius: 8px;
   margin-left: 8px;
@@ -205,7 +206,7 @@ body {
 }
 
 .nav-menu .btn-cta:hover { 
-  background: #0284c7;
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
   transform: translateY(-2px);
 }
 
@@ -213,10 +214,65 @@ body {
   display: none;
 }
 
+/* Book Appointment Button - Outstanding Design */
+.btn-appointment {
+  position: relative;
+  color: #D4AF37 !important;
+  background: transparent !important;
+  padding: 12px 24px !important;
+  border-radius: 30px !important;
+  margin-left: 16px !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  border: 2px solid #D4AF37 !important;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4), inset 0 0 20px rgba(212, 175, 55, 0.1) !important;
+  transition: all 0.4s ease !important;
+  animation: pulseGlow 2s infinite;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-appointment::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: blur(8px);
+}
+
+.btn-appointment:hover {
+  color: #1a1a1a !important;
+  background: linear-gradient(135deg, #D4AF37, #FFD700) !important;
+  border-color: #FFD700 !important;
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6), 0 0 40px rgba(255, 215, 0, 0.4) !important;
+}
+
+.btn-appointment:hover::before {
+  opacity: 1;
+}
+
+.btn-appointment::after {
+  display: none !important;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4), inset 0 0 20px rgba(212, 175, 55, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.6), inset 0 0 30px rgba(212, 175, 55, 0.2);
+  }
+}
+
 /* Mobile toggle */
 .nav-toggle { 
   display: none; 
-  background: #0ea5e9; 
+  background: rgba(255, 255, 255, 0.2); 
   border: 0; 
   cursor: pointer; 
   width: 44px; 
@@ -333,7 +389,7 @@ body {
   height: 85vh; 
   min-height: 520px; 
   overflow: hidden; 
-  background: #eef1f5; 
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #3d3d3d 100%); 
 }
 
 .slides { 
@@ -360,7 +416,7 @@ body {
 .slide-overlay { 
   position: absolute; 
   inset: 0; 
-  background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(0,0,0,0.4) 70%, rgba(0,0,0,0.6));
+  background: linear-gradient(135deg, rgba(26,26,26,0.5) 0%, rgba(107,0,0,0.4) 50%, rgba(26,26,26,0.6) 100%);
 }
 
 .slide-content { 
@@ -386,6 +442,7 @@ body {
 
 .slide-content p { 
   font-size: clamp(0.95rem, 1.6vw, 1.1rem); 
+  color: #ffffff;
   opacity: .95; 
   margin-bottom: 24px;
   text-shadow: 0 1px 8px rgba(0,0,0,0.3);
@@ -404,15 +461,15 @@ body {
 }
 
 .btn-gold { 
-  color: #ffffff; 
-  background: #0ea5e9; 
-  box-shadow: 0 4px 16px rgba(14,165,233,0.3); 
+  color: #1a1a1a; 
+  background: linear-gradient(135deg, #D4AF37, #FFD700); 
+  box-shadow: 0 4px 16px rgba(212,175,55,0.4); 
 }
 
 .btn-gold:hover { 
-  background: #0284c7;
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(14,165,233,0.4); 
+  box-shadow: 0 8px 24px rgba(212,175,55,0.6); 
 }
 
 /* Arrows */
@@ -505,7 +562,7 @@ section::after {
 h2 { 
   text-align: center; 
   margin-bottom: 40px; 
-  color: #111827; 
+  color: #6B0000; 
   letter-spacing: -0.5px;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
@@ -525,7 +582,7 @@ p {
    SERVICES - Modern Card Design
    =================================================================== */
 .services {
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 80px 8%;
 }
 
@@ -541,9 +598,9 @@ p {
   text-align: center;
   border-radius: 16px;
   overflow: hidden;
-  background: #fafbfc;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  background: #FFFFFF;
+  border: 2px solid #F5F5DC;
+  box-shadow: 0 4px 16px rgba(107,0,0,0.1);
   transition: all 0.3s ease;
 }
 
@@ -555,8 +612,8 @@ p {
 
 .service:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-  border-color: #0ea5e9;
+  box-shadow: 0 12px 32px rgba(107,0,0,0.25);
+  border-color: #D4AF37;
 }
 
 .service img {
@@ -573,7 +630,7 @@ p {
 
 .service h3 { 
   margin: 20px 0 12px; 
-  color: #111827;
+  color: #6B0000;
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -590,7 +647,7 @@ p {
    ABOUT SECTION - Modern Light Cards
    =================================================================== */
 .about {
-  background: #f5f7fa;
+  background: linear-gradient(135deg, #F5F5DC 0%, #FAF8F3 100%);
   padding: 80px 8%;
 }
 
@@ -612,16 +669,16 @@ p {
   text-align: center;
   max-width: 900px;
   margin: 0 auto 60px;
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 40px;
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #D4AF37;
 }
 
 .about-intro p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #374151;
+  color: #2d2d2d;
 }
 
 .about-grid {
@@ -632,22 +689,22 @@ p {
 }
 
 .about-card {
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 36px;
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #F5F5DC;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 16px rgba(107,0,0,0.08);
 }
 
 .about-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-  border-color: #0ea5e9;
+  box-shadow: 0 12px 32px rgba(107,0,0,0.2);
+  border-color: #D4AF37;
 }
 
 .about-card h3 {
-  color: #0ea5e9;
+  color: #6B0000;
   margin-bottom: 16px;
   font-size: 1.35rem;
   font-weight: 600;
@@ -692,7 +749,7 @@ p {
    VISION & MISSION - Modern Cards
    =================================================================== */
 .vision {
-  background: #ffffff;
+  background: #1a1a1a;
   padding: 80px 8%;
 }
 
@@ -703,6 +760,10 @@ p {
 .vision > * {
   position: relative;
   z-index: 1;
+}
+
+.vision h2 {
+  color: #D4AF37;
 }
 
 .vision-content {
@@ -716,28 +777,30 @@ p {
 
 .vision-content div { 
   flex: 1 1 400px; 
-  background: #fafbfc;
+  background: rgba(255,255,255,0.05);
   padding: 40px; 
-  border-left: 4px solid #0ea5e9;
+  border-left: 4px solid #D4AF37;
   border-radius: 12px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 16px rgba(212,175,55,0.1);
+  backdrop-filter: blur(10px);
 }
 
 .vision-content div:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 32px rgba(212,175,55,0.3);
+  background: rgba(255,255,255,0.08);
 }
 
 .vision-content h3 {
-  color: #0ea5e9;
+  color: #D4AF37;
   font-weight: 700;
   margin-bottom: 18px;
   font-size: 1.5rem;
 }
 
 .vision-content p {
-  color: #374151;
+  color: #E0E0E0;
   line-height: 1.8;
 }
 
@@ -745,7 +808,7 @@ p {
    TEAM SECTION
    =================================================================== */
 .team {
-  background: #f5f7fa;
+  background: linear-gradient(135deg, #F5F5DC 0%, #FAF8F3 100%);
   padding: 80px 8%;
 }
 
@@ -783,7 +846,7 @@ p {
    =================================================================== */
 .contact {
   text-align: center;
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 80px 8%;
 }
 
@@ -792,7 +855,7 @@ p {
 }
 
 .contact > p {
-  color: #6b7280;
+  color: #2d2d2d;
   font-size: 1.1rem;
   margin-bottom: 40px;
 }
@@ -802,32 +865,32 @@ p {
   line-height: 2;
   max-width: 700px;
   margin: 0 auto;
-  background: #fafbfc;
+  background: linear-gradient(135deg, #F5F5DC, #FFFFFF);
   padding: 40px;
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  border: 2px solid #D4AF37;
+  box-shadow: 0 4px 16px rgba(107,0,0,0.1);
 }
 
 .contact-info p {
   margin-bottom: 16px;
-  color: #374151;
+  color: #2d2d2d;
   font-size: 1rem;
 }
 
 .contact-info strong {
-  color: #111827;
+  color: #6B0000;
   font-weight: 600;
 }
 
 .contact-info a {
-  color: #0ea5e9;
+  color: #6B0000;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .contact-info a:hover {
-  color: #0284c7;
+  color: #D4AF37;
   text-decoration: underline;
 }
 
@@ -837,9 +900,9 @@ p {
 footer { 
   text-align: center; 
   padding: 50px 32px 32px; 
-  background: #ffffff; 
-  color: #4b5563; 
-  border-top: 1px solid #e5e7eb; 
+  background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 50%, #000000 100%); 
+  color: #E0E0E0; 
+  border-top: 2px solid #D4AF37; 
 }
 
 .footer-content {
@@ -849,7 +912,7 @@ footer {
 
 .footer-content > p {
   margin-bottom: 24px;
-  color: #6b7280;
+  color: #D4AF37;
   font-size: 0.95rem;
 }
 
@@ -867,19 +930,19 @@ footer {
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: #f9fafb;
+  background: rgba(212,175,55,0.1);
   border-radius: 50%;
-  color: #0ea5e9;
+  color: #D4AF37;
   transition: all 0.3s ease;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #D4AF37;
 }
 
 .social-links a:hover {
-  background: #0ea5e9;
-  color: #ffffff;
+  background: #D4AF37;
+  color: #1a1a1a;
   transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(14,165,233,0.3);
-  border-color: #0ea5e9;
+  box-shadow: 0 6px 20px rgba(212,175,55,0.5);
+  border-color: #FFD700;
 }
 
 .social-links a svg {
@@ -934,7 +997,7 @@ footer {
 
 .service-detail {
   padding: 80px 8%;
-  background: #f5f7fa;
+  background: linear-gradient(135deg, #F5F5DC 0%, #FAF8F3 100%);
 }
 
 .service-detail-container {
@@ -966,22 +1029,23 @@ footer {
 }
 
 .detail-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: #FFFFFF;
+  border: 2px solid #F5F5DC;
   border-radius: 16px;
   padding: 36px;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(107,0,0,0.08);
 }
 
 .detail-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-  border-color: #0ea5e9;
-  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(107,0,0,0.2);
+  border-color: #D4AF37;
+  background: #FFFFFF;
 }
 
 .detail-card h3 {
-  color: #0ea5e9;
+  color: #6B0000;
   margin-bottom: 16px;
   font-size: 1.35rem;
   font-weight: 600;
@@ -1009,7 +1073,7 @@ footer {
   content: "✓";
   position: absolute;
   left: 0;
-  color: #0ea5e9;
+  color: #D4AF37;
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -1022,19 +1086,19 @@ footer {
 }
 
 .step {
-  background: #f9fafb;
+  background: #FFFFFF;
   padding: 32px;
-  border-left: 4px solid #0ea5e9;
+  border-left: 4px solid #D4AF37;
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #F5F5DC;
   border-left-width: 4px;
-  border-left-color: #0ea5e9;
+  border-left-color: #D4AF37;
 }
 
 .step-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0ea5e9;
+  color: #6B0000;
   opacity: 0.3;
   line-height: 1;
   margin-bottom: 12px;
@@ -1064,19 +1128,19 @@ footer {
   background: #ffffff;
   padding: 32px;
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 2px solid #F5F5DC;
+  box-shadow: 0 4px 16px rgba(107,0,0,0.08);
   transition: all 0.3s ease;
 }
 
 .feature:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  border-color: #0ea5e9;
+  box-shadow: 0 12px 32px rgba(107,0,0,0.2);
+  border-color: #D4AF37;
 }
 
 .feature h3 {
-  color: #0ea5e9;
+  color: #6B0000;
   margin-bottom: 14px;
   font-size: 1.2rem;
   font-weight: 600;
@@ -1089,15 +1153,16 @@ footer {
 }
 
 .included-list {
-  background: #f9fafb;
+  background: #FFFFFF;
   padding: 48px;
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #D4AF37;
   margin: 40px 0 60px;
+  box-shadow: 0 4px 16px rgba(107,0,0,0.08);
 }
 
 .included-list h3 {
-  color: #111827;
+  color: #6B0000;
   font-size: 1.5rem;
   margin-bottom: 24px;
   text-align: center;
@@ -1122,28 +1187,28 @@ footer {
   content: "✓";
   position: absolute;
   left: 0;
-  color: #0ea5e9;
+  color: #D4AF37;
   font-weight: 700;
   font-size: 1.2rem;
 }
 
 .cta-section {
   text-align: center;
-  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
   padding: 60px 40px;
   border-radius: 16px;
-  border: 1px solid #bfdbfe;
+  border: 2px solid #D4AF37;
   margin-top: 60px;
 }
 
 .cta-section h2 {
-  color: #0284c7;
+  color: #D4AF37;
   margin-bottom: 16px;
 }
 
 .cta-section p {
   font-size: 1.1rem;
-  color: #374151;
+  color: #E0E0E0;
   margin-bottom: 28px;
 }
 
@@ -1157,34 +1222,34 @@ footer {
    PROJECTS PAGE STYLES
    =================================================================== */
 .page-header {
-  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
   padding: 80px 24px 60px;
   text-align: center;
-  border-bottom: 1px solid #bfdbfe;
+  border-bottom: 2px solid #D4AF37;
 }
 
 .page-header h1 {
   font-size: 2.5rem;
-  color: #0284c7;
+  color: #D4AF37;
   margin-bottom: 16px;
   font-weight: 700;
 }
 
 .page-header p {
   font-size: 1.1rem;
-  color: #4b5563;
+  color: #E0E0E0;
 }
 
 /* Clients Section */
 .clients-section {
   padding: 80px 8%;
-  background: #f5f7fa;
+  background: linear-gradient(135deg, #F5F5DC 0%, #FAF8F3 100%);
 }
 
 .clients-section h2 {
   text-align: center;
   font-size: 2.2rem;
-  color: #111827;
+  color: #6B0000;
   margin-bottom: 16px;
 }
 
@@ -1204,19 +1269,19 @@ footer {
 }
 
 .client-card {
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 2px solid #F5F5DC;
+  box-shadow: 0 4px 16px rgba(107,0,0,0.08);
 }
 
 .client-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-  border-color: #0ea5e9;
+  box-shadow: 0 12px 32px rgba(107,0,0,0.25);
+  border-color: #D4AF37;
 }
 
 .client-image {
@@ -1247,7 +1312,7 @@ footer {
   right: 0;
   bottom: 0;
   z-index: 2;
-  background: rgba(14, 165, 233, 0.95);
+  background: rgba(107, 0, 0, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1261,14 +1326,14 @@ footer {
 
 .view-gallery {
   background: #ffffff;
-  color: #0ea5e9;
+  color: #6B0000;
   padding: 12px 28px;
   border-radius: 8px;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 0.5px;
-  border: 2px solid #ffffff;
+  border: 2px solid #D4AF37;
 }
 
 .client-info {
@@ -1276,7 +1341,7 @@ footer {
 }
 
 .client-info h3 {
-  color: #0ea5e9;
+  color: #6B0000;
   font-size: 1.25rem;
   margin-bottom: 8px;
   font-weight: 600;
@@ -1290,25 +1355,25 @@ footer {
 
 .project-type {
   display: inline-block;
-  background: #f0f9ff;
-  color: #0284c7;
+  background: rgba(212, 175, 55, 0.1);
+  color: #6B0000;
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
-  border: 1px solid #bfdbfe;
+  border: 1px solid #D4AF37;
 }
 
 /* Happy Customers Section */
 .happy-customers {
   padding: 80px 8%;
-  background: #ffffff;
+  background: #1a1a1a;
 }
 
 .happy-customers h2 {
   text-align: center;
   font-size: 2.2rem;
-  color: #111827;
+  color: #D4AF37;
   margin-bottom: 16px;
 }
 
@@ -1321,18 +1386,20 @@ footer {
 }
 
 .testimonial-card {
-  background: #ffffff;
+  background: rgba(255,255,255,0.05);
   padding: 36px;
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
+  border: 2px solid rgba(212, 175, 55, 0.2);
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 16px rgba(212,175,55,0.1);
+  backdrop-filter: blur(10px);
 }
 
 .testimonial-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-  border-color: #0ea5e9;
+  box-shadow: 0 12px 32px rgba(212,175,55,0.3);
+  border-color: #D4AF37;
+  background: rgba(255,255,255,0.08);
 }
 
 .stars {
@@ -1343,7 +1410,7 @@ footer {
 }
 
 .testimonial-text {
-  color: #4b5563;
+  color: #E0E0E0;
   line-height: 1.8;
   margin-bottom: 22px;
   font-style: italic;
@@ -1351,7 +1418,7 @@ footer {
 }
 
 .customer-info h4 {
-  color: #0ea5e9;
+  color: #D4AF37;
   font-size: 1.1rem;
   margin-bottom: 5px;
   font-weight: 600;
@@ -1422,8 +1489,8 @@ footer {
 
 .gallery-item:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  border-color: #0ea5e9;
+  box-shadow: 0 8px 24px rgba(107,0,0,0.25);
+  border-color: #D4AF37;
 }
 
 .gallery-item img {
@@ -1438,7 +1505,7 @@ footer {
    =================================================================== */
 .ideas-hero {
   height: 50vh;
-  background: linear-gradient(rgba(14, 165, 233, 0.7), rgba(2, 132, 199, 0.8)), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80');
+  background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(107, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1452,8 +1519,8 @@ footer {
 .ideas-hero h1 {
   font-size: 3rem;
   margin-bottom: 15px;
-  color: #ffffff;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: #D4AF37;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   font-weight: 700;
   letter-spacing: -0.5px;
 }
@@ -1463,12 +1530,12 @@ footer {
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
-  color: #f0f9ff;
+  color: #E0E0E0;
 }
 
 .ideas-section {
   padding: 80px 8%;
-  background: #f5f7fa;
+  background: linear-gradient(135deg, #F5F5DC 0%, #FAF8F3 100%);
 }
 
 .ideas-container {
@@ -1484,20 +1551,20 @@ footer {
 }
 
 .idea-card {
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s ease;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #F5F5DC;
   cursor: pointer;
   position: relative;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 16px rgba(107,0,0,0.08);
 }
 
 .idea-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-  border-color: #0ea5e9;
+  box-shadow: 0 12px 32px rgba(107,0,0,0.25);
+  border-color: #D4AF37;
 }
 
 .idea-card-image {
@@ -1523,8 +1590,8 @@ footer {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: rgba(14, 165, 233, 0.95);
-  color: #ffffff;
+  background: rgba(107, 0, 0, 0.95);
+  color: #D4AF37;
   padding: 6px 15px;
   border-radius: 20px;
   font-size: 0.75rem;
@@ -1533,6 +1600,7 @@ footer {
   letter-spacing: 0.5px;
   z-index: 2;
   backdrop-filter: blur(4px);
+  border: 1px solid #D4AF37;
 }
 
 .idea-card-content {
@@ -1540,7 +1608,7 @@ footer {
 }
 
 .idea-card-content h3 {
-  color: #0ea5e9;
+  color: #6B0000;
   font-size: 1.4rem;
   margin-bottom: 12px;
   font-weight: 600;
@@ -1572,14 +1640,14 @@ footer {
 }
 
 .idea-stat-icon {
-  color: #0ea5e9;
+  color: #D4AF37;
   font-size: 1rem;
 }
 
 .view-ideas-btn {
   display: inline-block;
-  background: #0ea5e9;
-  color: #ffffff;
+  background: linear-gradient(135deg, #D4AF37, #FFD700);
+  color: #1a1a1a;
   padding: 12px 28px;
   border-radius: 8px;
   text-decoration: none;
@@ -1587,6 +1655,7 @@ footer {
   transition: all 0.3s ease;
   margin-top: 12px;
   font-size: 0.9rem;
+  box-shadow: 0 4px 16px rgba(212,175,55,0.3);
 }
 
 .view-ideas-btn:hover {
